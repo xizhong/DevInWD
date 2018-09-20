@@ -10,7 +10,7 @@ class EvernoteController(object):
         self.noteStore = self.client.get_note_store()
         self.username = self.userStore.getUser().username
 
-    ##　创建纪事本，如果已存在，不创建, 返回guid
+    ##　创建记事本，如果已存在，不创建, 返回guid
     def createNotebook(self, notebookName):
         notebookDict= self.getNotebook()
         if notebookName in notebookDict.keys():
